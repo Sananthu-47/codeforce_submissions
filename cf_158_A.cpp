@@ -2,16 +2,13 @@
 using namespace std;
 
 void solve(int n,int k,vector<int> &arr){
-    int pos = arr[k-1];
-    if(pos<=0) {
-        cout<<0;
-        return;
+    int max_score = arr[k-1];
+    int i = 0;
+    while(i<n && arr[i]>=max_score && arr[i]>0){
+        i++;
     }
-    k--;
-    while(arr[k]==pos){
-        k++;
-    }
-    cout<<k;
+    cout<<i;
+    return;
 }
 
 int main(){
